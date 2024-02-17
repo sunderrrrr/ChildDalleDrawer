@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Childdrawer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#FFE0B2</item>
+        <item name="colorPrimaryVariant">#FFCC80</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#9C7133</item>
+        <item name="colorSecondaryVariant">#AF741D</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="backgroundColor">#00E1FF</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+</resources>
