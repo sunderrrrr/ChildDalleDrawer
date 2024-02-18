@@ -1,11 +1,12 @@
-package com.bkmzdev.childdrawer.ui.home
-
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.util.Log
 import androidx.lifecycle.ViewModel
+import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import org.json.JSONObject
+import java.io.IOException
 
 class HomeViewModel : ViewModel() {
+
     fun fetchImageFromDALL_E_3(searchQuery: String, onResponse: (String?) -> Unit) {
         val client = OkHttpClient()
         val url = "https://api.openai.com/v1/engines/davinci/images"
@@ -15,7 +16,7 @@ class HomeViewModel : ViewModel() {
 
         val request = Request.Builder()
             .url(url)
-            .post(RequestBody.create(MediaType.parse("application/json"), jsonBody))
+            .post(RequestBody.create("application/json".toMediaTypeOrNull(), jsonBody))
             .addHeader("Authorization", "Bearer YOUR_API_KEY")  // Замените YOUR_API_KEY на ваш ключ API от OpenAI
             .addHeader("Content-Type", "application/json")
             .build()
@@ -33,5 +34,4 @@ class HomeViewModel : ViewModel() {
             }
         })
     }
-
 }
