@@ -1,6 +1,7 @@
 package com.bkmzdev.childdrawer.ui.home
 
 import HomeViewModel
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import com.bkmzdev.childdrawer.AdSDK
 import com.bkmzdev.childdrawer.R
 import com.bkmzdev.childdrawer.databinding.FragmentHomeBinding
 import com.bumptech.glide.Glide
+import com.google.android.material.snackbar.Snackbar
 
 
 class HomeFragment : Fragment() {
@@ -57,17 +59,25 @@ class HomeFragment : Fragment() {
                         }
                     }
                     if (imageUrl == "conn_err"){
-                        activity?.runOnUiThread { Toast.makeText(requireActivity(), "Нет соединения с интернетом", Toast.LENGTH_SHORT).show() }
+                        val sb = Snackbar.make(view, "Нет соединения с интернетом", Snackbar.LENGTH_SHORT)
+                        sb.setTextColor(Color.WHITE)
+                        val sbView = sb.view
+                        sbView.setBackgroundColor(Color.BLACK)
+                        sb.show()
                     }
                     if (imageUrl == "serv_err"){
-                        activity?.runOnUiThread { Toast.makeText(requireActivity(), "Ошибка на сервере", Toast.LENGTH_SHORT).show() }
+                        activity?.runOnUiThread {
+                                val sb =Snackbar.make(view, "Ошибка на сервере", Snackbar.LENGTH_SHORT)
+                                sb.setTextColor(Color.WHITE)
+                                val sbView = sb.view
+                                sbView.setBackgroundColor(Color.BLACK)
+                                sb.show()
+                            }
+                        }
                     }
                 }
-
-                }
-
+            }
         }
-    }
 
         override fun onDestroyView() {
         super.onDestroyView()

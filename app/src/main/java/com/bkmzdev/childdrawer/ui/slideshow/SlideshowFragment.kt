@@ -38,10 +38,10 @@ class SlideshowFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val instructionSteps = ArrayList<String>()
-        instructionSteps.add("1. Напиши в строку то, что ты хочешь увидеть")
-        instructionSteps.add("2. Если не можешь придумать, то загляни в раздел с идеями")
-        instructionSteps.add("3. Нажми на кнопку")
-        instructionSteps.add("4. Немного подожди и сказка оживет на твоем экране")
+        instructionSteps.add("1. Напиши в строку то, что ты хочешь увидеть. Это может быть что угодно: Синий гусь в очках, конь с крыльями итд")
+        instructionSteps.add("2. Если не можешь придумать, то загляни в раздел с идеями, там ты точно найдешь что-нибудь интересное")
+        instructionSteps.add("3. Нажми на кнопку, но перед этим убедись, что у тебя есть интернет, а то ничего не выйдет")
+        instructionSteps.add("4. Немного подожди и сказка оживет на твоем экране. Ты можешь делать так сколько угодно")
         val list = binding.InstructListView
         val adapter = ArrayAdapter(requireActivity(), R.layout.ideas_list_item, R.id.idea, instructionSteps)
         list.adapter = adapter

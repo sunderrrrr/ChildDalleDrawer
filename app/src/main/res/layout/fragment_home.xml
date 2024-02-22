@@ -10,8 +10,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/prompt"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="312dp"
-        android:layout_height="57dp"
+        android:layout_width="324dp"
+        android:layout_height="65dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="120dp"
         android:hint="Что-ты хочешь увидеть?"
@@ -37,21 +37,21 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="402dp"
-        android:layout_height="397dp"
+        android:layout_width="406dp"
+        android:layout_height="432dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/prompt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267">
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="359dp"
+            android:layout_height="321dp"
             android:layout_gravity="center"
             android:layout_margin="15sp"
             android:src="@drawable/hedgehog"
@@ -71,8 +71,8 @@
 
     <com.yandex.mobile.ads.banner.BannerAdView
         android:id="@+id/banner"
-        android:layout_width="315dp"
-        android:layout_height="80dp"
+        android:layout_width="312dp"
+        android:layout_height="88dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/prompt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,8 +81,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="276dp"
-        android:layout_height="67dp"
+        android:layout_width="265dp"
+        android:layout_height="70dp"
         android:text="создать"
         android:textColor="@color/dark_brown"
         app:cornerRadius="40sp"

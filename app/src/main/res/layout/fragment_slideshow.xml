@@ -24,8 +24,8 @@
 
     <ListView
         android:id="@+id/InstructListView"
-        android:layout_width="406dp"
-        android:layout_height="423dp"
+        android:layout_width="413dp"
+        android:layout_height="530dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
