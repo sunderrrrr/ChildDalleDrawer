@@ -12,6 +12,8 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.bkmzdev.childdrawer.databinding.ActivityMainBinding
+import com.yandex.mobile.ads.common.MobileAds
+import com.yandex.mobile.ads.instream.MobileInstreamAds
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +22,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        MobileInstreamAds.setAdGroupPreloading(true)
+        MobileAds.enableLogging(true)
+        MobileAds.initialize(this) {
+            // now you can use ads
+        }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

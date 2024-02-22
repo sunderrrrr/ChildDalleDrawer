@@ -12,8 +12,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="312dp"
         android:layout_height="57dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="120dp"
         android:hint="Что-ты хочешь увидеть?"
         android:textColorHint="@color/dark_brown"
         app:boxStrokeColor="@color/dark_brown"
@@ -24,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.51"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="HardcodedText,NotSibling">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -36,14 +36,17 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="402dp"
         android:layout_height="397dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/prompt"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.267">
 
         <ImageView
             android:id="@+id/imageView"
@@ -66,6 +69,16 @@
             android:textSize="20sp" />
     </LinearLayout>
 
+    <com.yandex.mobile.ads.banner.BannerAdView
+        android:id="@+id/banner"
+        android:layout_width="315dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/prompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="276dp"
@@ -78,5 +91,5 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/prompt"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.65" />
 </androidx.constraintlayout.widget.ConstraintLayout>
